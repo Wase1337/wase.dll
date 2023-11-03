@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #arkaPlanVideo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+        }
+
+        .logo:hover {
+            border-color: gray; /* Fare imleci üzerine geldiğinde kenarlık rengi gri yapılır */
+        }
+
+        #logo1 {
+            top: 20px; /* Logo yatay konum ayarı */
+            left: 20px; /* Logo dikey konum ayarı */
+        }
+
+        #logo2 {
+            top: 20px; /* İkinci logo yatay konum ayarı */
+            left: 200px; /* İkinci logo dikey konum ayarı */
+        }
+
+        #logo3 {
+            top: 20px; /* Üçüncü logo yatay konum ayarı */
+            left: 380px; /* Üçüncü logo dikey konum ayarı */
+        }
+    </style>
+</head>
+<body>
+    <audio autoplay>
+        <source src="Y2DL_Rusların_Kopmalık_Şarkısı_Bochka_Bass.mp3" type="audio/mp3">
+        Tarayıcınız audio etiketini desteklemiyor.
+    </audio>
+
+    <video autoplay loop muted id="arkaPlanVideo">
+        <source src="videoplayback.mp4" type="video/mp4">
+        Tarayıcınız video etiketini desteklemiyor.
+    </video>
+
+    <a href="https://discord.com/users/1151150555557806110" class="logo" id="logo1">
+        <img src="indir (1).png" alt="indir (2) (1).png">
+    </a>
+
+    <a href="https://github.com/Wase1337" class="logo" id="logo2">
+        <img src="25231 (4).png" alt="25231 (4).png">
+    </a>
+
+    <a href="https://t.me/wase1881" class="logo" id="logo3">
+        <img src="62de96d5ff3c6e4b8b5de8aa (3).png" alt="62de96d5ff3c6e4b8b5de8aa (3).png">
+    </a>
+
+    <!-- Sayfa içeriği buraya gelecek -->
+
+    <p id="videoDurduMesaji">Video durdu!</p>
+
+    <script>
+        var video = document.getElementById("arkaPlanVideo");
+        var videoDurduMesaji = document.getElementById("videoDurduMesaji");
+
+        video.addEventListener("pause", function() {
+            videoDurduMesaji.style.display = "block";
+        });
+
+        video.addEventListener("play", function() {
+            videoDurduMesaji.style.display = "none";
+        });
+
+        document.addEventListener("contextmenu", function (e) {
+            e.preventDefault();
+        });
+    </script>
+
+    <script>
+        function silCerezleri() {
+            // Tüm çerezleri silmek için kullanabileceğiniz bir JavaScript kodu
+            document.cookie = "cerezAdi=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            // Diğer çerezleri benzer şekilde silmek için bu kodu tekrarlayabilirsiniz
+        }
+    </script>
+
+
+    <a href="javascript:silCerezleri();" style="color: black; text-decoration: none;">Dont Click!</a>
+
+</body>
+</html>
